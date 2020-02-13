@@ -1,1 +1,1 @@
-# web-type-2020
+# web-type
