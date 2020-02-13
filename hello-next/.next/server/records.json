@@ -1,0 +1,51 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi private-next-pages/about.js": 0,
+      "multi private-next-pages/api/randomQuote.js": 1,
+      "multi private-next-pages/index.js": 2,
+      "multi private-next-pages/p/[id].js": 3,
+      "multi private-next-pages/post.js": 4,
+      "multi next/dist/pages/_app": 5,
+      "multi next/dist/pages/_error": 6,
+      "multi next/dist/pages/_document": 7
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7
+    }
+  },
+  "chunks": {
+    "byName": {
+      "init-server.js": 0,
+      "on-error-server.js": 1,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/_app.js": 2,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/_document.js": 3,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/_error.js": 4,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/about.js": 5,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/api/randomQuote.js": 6,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/index.js": 7,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/p/[id].js": 8,
+      "static/QstwHel3oyXjrzdqzvEQV/pages/post.js": 9
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}
