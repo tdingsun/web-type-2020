@@ -42,6 +42,7 @@ class Paragraph extends React.Component {
                 transition={{duration: 60, times: [0, 0.3, 0.5, 0.7, 1], loop: Infinity, repeatDelay: 10}}
                 >
                 <ReactMarkdown source={this.state.mdpath} />
+                
                 </motion.div>
                 <style jsx>{`
                     .container {
@@ -54,7 +55,19 @@ class Paragraph extends React.Component {
                         column-count: 4;
                         column-gap: 50px;
                         column-rule: 1px solid ${this.props.colors[1]};
+                        position: fixed;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
                     }
+                    .container div:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 50px;
+                        right: -50px;
+                        height: 1px;
+                    }
+
                     :global(.container p) {
                         color: ${this.props.colors[2]};
                         line-height: 1.3em;
@@ -67,7 +80,6 @@ class Paragraph extends React.Component {
                         padding: 0 0 15px 0;
                         margin: 0 0 30px 0;
                         column-span: all;
-                        border-bottom: 1px solid ${this.props.colors[1]};
                         font-weight: normal;
                     }
                 `}

@@ -38,9 +38,11 @@ class Nav extends React.Component {
           font-size: 24px;
           color: ${this.props.colors[1]};
           margin: 1em 0;
+          padding-bottom: 0.5em;
           display: flex;
           justify-content: center;
           align-items: center;
+          border-bottom: 1px solid ${this.props.colors[1]};
         }
         
         .navRight{
