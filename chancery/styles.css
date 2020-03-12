@@ -45,6 +45,7 @@ body {
 
 #title {
   padding-left: 25px;
+  color: var(--color2);
 }
 
 .page-flow {
@@ -62,7 +63,7 @@ body {
   line-height: 1.5;
   text-align: right;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   z-index: 2;
   padding: 25px;
   position: fixed;
@@ -118,9 +119,10 @@ body {
   text-align: center;
   padding-top: 75px;
   animation: cycle 3s infinite ease-in-out;
+  color: var(--color2);
 }
 
-.wiggly {
+.wiggly-text {
   font-size: 5vw;
   width: 80vw;
   max-width: 1200px;
@@ -186,6 +188,7 @@ body {
   position: relative;
   text-align: center;
   padding: 50px 25px;
+  transition: 0.35s;
 }
 
 .label {
@@ -225,7 +228,6 @@ a:hover {
 .diffuse {
   font-variation-settings: 'wght' 100, 'wdth' 200;
 }
-
 
 .scrambled {
   font-variation-settings: 'wght' 100, 'wdth' 500;

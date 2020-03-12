@@ -26,8 +26,12 @@ $(window).resize(function(){
 	resize();
 });
 
-$("#downarrow").click(function(e){
-	$(".page").get(1).scrollIntoView();
+$(".center-large-text").mouseenter(function(e){
+	$(e.target).addClass("wiggly");
+});
+
+$(".center-large-text").mouseleave(function(e){
+	$(e.target).removeClass("wiggly");
 });
 
 
