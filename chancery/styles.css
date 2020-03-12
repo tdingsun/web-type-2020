@@ -112,15 +112,6 @@ body {
   flex-direction: row;
 }
 
-.leftchar {
-  cursor: pointer;
-  transition: 0.35s;
-}
-
-.leftchar:hover {
-  font-variation-settings: 'wght' 500, 'wdth' 1000!important;
-}
-
 #showcase {
   font-size: 25vw;
   width: 100%;
