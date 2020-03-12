@@ -43,6 +43,7 @@ class Nav extends React.Component {
           justify-content: center;
           align-items: center;
           border-bottom: 1px solid ${this.props.colors[1]};
+          Z-index: 999;
         }
         
         .navRight{

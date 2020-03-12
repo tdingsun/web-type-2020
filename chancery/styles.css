@@ -1,0 +1,263 @@
+@font-face {
+  font-family: 'cross chancery';
+  src: url("./CrossChanceryGX.ttf") format("truetype-variations")
+}
+
+:root {
+  --main-bg-color: cornsilk;
+  --color: black;
+  --color2: red;
+  --border-style: double;
+  --border-width: 3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'cross chancery';
+  font-size: 6vw;
+  font-variation-settings: 'wght' 100, 'wdth' 100;
+  background-color: var(--main-bg-color);
+  color: var(--color);
+  line-height: 1.05;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  border-top: var(--border-width) var(--border-style) var(--color2);
+  display: flex;
+}
+
+.page-h {
+  width: 100vw;
+  height: 100vh;
+  border-top: var(--border-width) var(--border-style) var(--color2);
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  padding-left: 25px;
+}
+
+.page-flow {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  /* background: linear-gradient(180deg, rgba(255,248,220,1) 0%, rgba(230,201,140,1) 100%); */
+}
+
+#runner {
+  height: 80px;
+  width: 100vw;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+  padding: 25px;
+  position: fixed;
+  color: var(--color2);
+}
+
+#downarrow {
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg);
+  border-bottom: var(--border-width) var(--border-style) var(--color2);
+  border-left: var(--border-width) var(--border-style) var(--color2);
+  position: absolute;
+  bottom: 50px;
+  left: calc(50vw - 26.5px);
+  transition: 0.25s;
+}
+
+#downarrow:hover {
+  bottom: 35px;
+}
+
+.left, .right {
+  width: 50%;
+  padding: 25px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left, .left-flow {
+  border-right: var(--border-width) var(--border-style) var(--color2);
+}
+
+.left-flow, .right-flow {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border-top: var(--border-width) var(--border-style) var(--color2);
+
+}
+
+.specimen-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftchar {
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.leftchar:hover {
+  font-variation-settings: 'wght' 500, 'wdth' 1000!important;
+}
+
+#showcase {
+  font-size: 25vw;
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+  animation: cycle 3s infinite ease-in-out;
+}
+
+.wiggly {
+  font-size: 5vw;
+  width: 80vw;
+  max-width: 1200px;
+  padding: 50px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+#mousemap {
+  padding-top: 50px;
+  font-size: 12vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+  position: relative;
+  background-color: var(--main-bg-color);
+  border: none;
+  cursor: crosshair;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  border: var(--border-width) var(--border-style) var(--color2);
+  background-color: whitesmoke;
+}
+
+.top-left {
+  top: 25px;
+  left: 25px;
+}
+
+.top-right {
+  top: 25px;
+  right: 25px;
+}
+
+.top-center {
+  top: 25px;
+  left: calc(50vw - 50px);
+}
+
+.bottom-left {
+  bottom: 25px;
+  left: 25px;
+}
+
+.bottom-right {
+  bottom: 25px;
+  right: 25px;
+}
+
+.bottom-center {
+  bottom: 25px;
+  left: calc(50vw - 50px);
+}
+
+.center-large-text {
+  position: relative;
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.label {
+  font-variation-settings: 'wght' 100, 'wdth' 100;
+  color: var(--color2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border-top: var(--border-width) var(--border-style) var(--color2);
+  padding-top: 10px;
+}
+
+a {
+  transition: 0.25s;
+  color: unset;
+}
+
+a:hover {
+  font-variation-settings: 'wght' 100, 'wdth' 200;
+
+}
+
+.cross {
+  font-variation-settings: 'wght' 200, 'wdth' 100;
+}
+
+.clover {
+  font-variation-settings: 'wght' 500, 'wdth' 100;
+}
+
+.spike {
+  font-variation-settings: 'wght' 1000, 'wdth' 100;
+}
+
+.diffuse {
+  font-variation-settings: 'wght' 100, 'wdth' 200;
+}
+
+
+.scrambled {
+  font-variation-settings: 'wght' 100, 'wdth' 500;
+}
+
+.boxy {
+  font-variation-settings: 'wght' 100, 'wdth' 1000;
+}
+
+@keyframes cycle {
+  0% {
+    font-variation-settings: 'wght' 100, 'wdth' 100;
+  }
+  25% {
+    font-variation-settings: 'wght' 500, 'wdth' 100;
+  }
+  50% {
+    font-variation-settings: 'wght' 1000, 'wdth' 100;
+  }
+  75% {
+    font-variation-settings: 'wght' 100, 'wdth' 500;
+  }
+  100% {
+    font-variation-settings: 'wght' 100, 'wdth' 100;
+  }
+}
