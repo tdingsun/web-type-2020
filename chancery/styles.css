@@ -5,6 +5,7 @@
 
 :root {
   --main-bg-color: cornsilk;
+  --bg-color-2: whitesmoke;
   --color: black;
   --color2: red;
   --border-style: double;
@@ -28,19 +29,32 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+table, tr, td {
+  border: 1px dotted var(--color2);
+  border-collapse: collapse;
+}
+
 .page {
   width: 100vw;
   height: 100vh;
   border-top: var(--border-width) var(--border-style) var(--color2);
   display: flex;
-}
-
-.page-h {
-  width: 100vw;
-  height: 100vh;
-  border-top: var(--border-width) var(--border-style) var(--color2);
-  display: flex;
-  flex-direction: column;
+  transition: 0.5s;
+  position: relative;
 }
 
 #title {
@@ -52,7 +66,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke;
+  background-color: var(--bg-color-2);
   /* background: linear-gradient(180deg, rgba(255,248,220,1) 0%, rgba(230,201,140,1) 100%); */
 }
 
@@ -70,7 +84,7 @@ body {
   color: var(--color2);
 }
 
-#downarrow {
+/* #downarrow {
   width: 50px;
   height: 50px;
   transform: rotate(-45deg);
@@ -80,11 +94,11 @@ body {
   bottom: 50px;
   left: calc(50vw - 26.5px);
   transition: 0.25s;
-}
+} */
 
-#downarrow:hover {
+/* #downarrow:hover {
   bottom: 35px;
-}
+} */
 
 .left, .right {
   width: 50%;
@@ -124,11 +138,14 @@ body {
 
 .wiggly-text {
   font-size: 5vw;
+  color: var(--color2);
   width: 80vw;
   max-width: 1200px;
+  margin: auto;
   padding: 50px;
   transition: 0.25s;
   cursor: pointer;
+  text-align: center;
 }
 
 #mousemap {
@@ -184,6 +201,18 @@ body {
   left: calc(50vw - 50px);
 }
 
+
+.info-box {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--color2);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .center-large-text {
   position: relative;
   text-align: center;
@@ -203,22 +232,27 @@ body {
   padding-top: 10px;
 }
 
+.label-info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
 a {
   transition: 0.25s;
   color: unset;
-}
-
-a:hover {
-  font-variation-settings: 'wght' 100, 'wdth' 200;
-
-}
-
-.cross {
   font-variation-settings: 'wght' 200, 'wdth' 100;
 }
 
+a:hover {
+  font-variation-settings: 'wght' 550, 'wdth' 200;
+}
+
+.cross {
+  font-variation-settings: 'wght' 100, 'wdth' 100;
+}
+
 .clover {
-  font-variation-settings: 'wght' 500, 'wdth' 100;
+  font-variation-settings: 'wght' 550, 'wdth' 100;
 }
 
 .spike {
@@ -235,6 +269,22 @@ a:hover {
 
 .boxy {
   font-variation-settings: 'wght' 100, 'wdth' 1000;
+}
+
+/* .right-flow *:hover, .left-flow *:hover {
+  background-color: var(--main-bg-color);
+} */
+
+
+.footer {
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  border-top: var(--border-width) var(--border-style) var(--color2);
+  justify-content: space-between;
+  color: var(--color2);
+  text-align: center;
 }
 
 @keyframes cycle {

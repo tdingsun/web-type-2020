@@ -26,20 +26,17 @@ $(window).resize(function(){
 	resize();
 });
 
-$(".center-large-text").mouseenter(function(e){
-	$(e.target).addClass("wiggly");
-});
-
-$(".center-large-text").mouseleave(function(e){
-	$(e.target).removeClass("wiggly");
-});
-
-
 $("#mousemap").mousemove(function(e){
-	wght = rangeMap(e.pageX, 150, width - 150, 100, 1000);
-	wdth = rangeMap(e.pageY, 150, height - 150, 100, 1000);
+	wght = Math.max(Math.min(Math.floor(rangeMap(e.pageX, 150, width - 150, 100, 1000)), 1000), 100);
+	wdth = Math.max(Math.min(Math.floor(rangeMap(e.pageY, 150, height - 150, 100, 1000)), 1000), 100);
 	$("#mousemap").css({
 		"font-variation-settings": `'wght' ${wght}, 'wdth' ${wdth}`
+	});
+	$("#info-box-wght").text(`WGHT: ${wght}`);
+	$("#info-box-wdth").text(`WDTH: ${wdth}`);
+	$(".info-box").css({
+		"left": e.pageX - 75,
+		"top": e.pageY
 	});
 });
 
