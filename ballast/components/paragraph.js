@@ -72,6 +72,7 @@ class Paragraph extends React.Component {
                         color: ${this.props.colors[2]};
                         line-height: 1.3em;
                         margin: 0 0 25px 0;
+                        padding-left: 25px;
                     }
 
                     :global(.container h1) {
