@@ -137,10 +137,11 @@ table, tr, td {
 }
 
 .wiggly-text {
-  font-size: 5vw;
+  font-size: max(min(5vw, 72px), 36px);
   color: var(--color2);
   width: 80vw;
   max-width: 1200px;
+  max-height: 100vh;
   margin: auto;
   padding: 50px;
   transition: 0.25s;
